@@ -5,7 +5,7 @@ Phase 2: W4A8 Uniform Quantization for Nemotron Hybrid Models
 Aggressive quantization approach targeting 75% memory reduction with acceptable accuracy trade-offs.
 Uses 4-bit weights with 8-bit activations for maximum compression.
 
-Author: esfomo3 research team
+Author: Yash Semlani (yashvsemlani@gmail.com)
 Date: 2024-12-19
 Status: SKELETON - To be implemented after Phase 1 validation
 """

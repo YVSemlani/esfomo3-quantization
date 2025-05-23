@@ -5,7 +5,7 @@ Phase 1: W8A8 Uniform Quantization for Nemotron Hybrid Models
 Conservative quantization approach targeting 50% memory reduction while preserving accuracy.
 Integrates MambaQuant for SSM layers and AutoGPTQ for MLP/Attention layers.
 
-Author: esfomo3 research team
+Author: Yash Semlani (yashvsemlani@gmail.com)
 Date: 2024-12-19
 """
 

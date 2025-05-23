@@ -5,7 +5,7 @@ Evaluation Framework for Nemotron Quantized Models
 Comprehensive evaluation suite for benchmarking quantized models against original performance.
 Supports arc_easy, arc_challenge, piqa, winogrande, and hellaswag benchmarks.
 
-Author: esfomo3 research team
+Author: Yash Semlani (yashvsemlani@gmail.com)
 Date: 2024-12-19
 """
 

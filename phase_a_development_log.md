@@ -108,4 +108,8 @@ esfomo3/
 ---
 
 ## Commit History
-- **Commit 1**: Initial Phase A setup and development log 
+- **Commit 1** (6854368): Initial Phase A setup and development log
+- **Commit 2** (7bca01b): Basic functionality tests - all passing
+- **Commit 3** (efa19df): Evaluation framework fixes and real benchmark validation
+- **Commit 4** (7056bba): Phase A foundation complete
+- **Commit 5**: Project cleanup - file renames, documentation, author info update 

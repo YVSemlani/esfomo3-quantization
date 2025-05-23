@@ -5,7 +5,7 @@ Phase 3: Block-Specific Mixed Precision Quantization for Nemotron Hybrid Models
 Advanced mixed precision approach for optimal balance between compression and accuracy.
 Uses different quantization strategies for different block types in the hybrid architecture.
 
-Author: esfomo3 research team
+Author: Yash Semlani (yashvsemlani@gmail.com)
 Date: 2024-12-19
 Status: SKELETON - To be implemented after Phase 1 & 2 validation
 """
