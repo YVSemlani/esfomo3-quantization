@@ -1,0 +1,6 @@
+[submodule "MambaQuant"]
+	path = MambaQuant
+	url = https://github.com/MambaQuant/MambaQuant.git
+[submodule "mamba"]
+	path = mamba
+	url = https://github.com/state-spaces/mamba.git
