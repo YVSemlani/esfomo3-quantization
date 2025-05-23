@@ -4,6 +4,11 @@ Basic test script for evaluation framework
 Tests evaluation setup without running full benchmarks
 """
 
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'evaluation'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
 import torch
 from evaluation_framework import EvaluationConfig, ModelEvaluator
 

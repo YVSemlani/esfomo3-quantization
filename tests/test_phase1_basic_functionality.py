@@ -4,6 +4,11 @@ Basic test script for Phase 1 implementation
 Tests model loading and analysis without full quantization
 """
 
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
 import torch
 from phase_1_quantization import Phase1Quantizer
 from analyze_nemotron_model import NemotronModelAnalyzer

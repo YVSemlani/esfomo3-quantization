@@ -20,51 +20,50 @@ This framework implements sophisticated quantization techniques for Nemotron hyb
 
 ```
 esfomo3/
-├── Core Quantization Implementation
+├── src/                                # Core Quantization Implementation
 │   ├── phase_1_quantization.py          # W8A8 uniform quantization (conservative)
 │   ├── phase_2_quantization.py          # W4A8 uniform quantization (aggressive) 
 │   ├── phase_3_quantization.py          # Block-specific mixed precision (advanced)
 │   └── analyze_nemotron_model.py        # Model architecture analysis tool
 │
-├── Evaluation Framework
+├── evaluation/                         # Evaluation Framework
 │   ├── evaluation_framework.py          # Comprehensive benchmarking suite
 │   ├── base_evals.py                   # Basic evaluation script
 │   ├── quantized_evals.py              # Quantized model evaluation
 │   └── run_analysis.py                 # Model analysis runner
 │
-├── Testing Suite
+├── tests/                              # Testing Suite
 │   ├── test_phase1_basic_functionality.py    # Phase 1 functionality tests
 │   ├── test_evaluation_framework_basic.py    # Evaluation framework tests
 │   └── test_evaluation_real_benchmark.py     # Real benchmark validation
 │
-├── Documentation & Planning
+├── docs/                               # Documentation & Planning
 │   ├── phase_a_development_log.md       # Detailed development tracking
 │   ├── quantization_implementation_guide.md # Implementation guidelines
 │   ├── nemotron_architecture_summary.md     # Architecture analysis
 │   └── phased_quantization_strategy.py      # Strategy documentation
 │
-├── External Dependencies
-│   ├── MambaQuant/                     # SSM-specific quantization framework
-│   └── mamba/                          # Official Mamba implementation
+├── scripts/                            # Utility Scripts
+│   ├── main.py                         # Basic model loading example
+│   └── debug_layer_names.py            # Layer debugging utility
 │
-├── Generated Outputs
-│   ├── quantized_models/               # Saved quantized models
-│   ├── evaluation_results/             # Benchmark results
-│   ├── test_benchmark_output/          # Test outputs
-│   ├── test_eval_output/               # Test evaluation results
-│   └── test_output/                    # General test outputs
+├── MambaQuant/                         # External Dependencies
+│   └── [SSM-specific quantization framework]
+├── mamba/
+│   └── [Official Mamba implementation]
 │
-└── Utility Scripts
-    ├── main.py                         # Basic model loading example
-    ├── debug_layer_names.py            # Layer debugging utility
-    └── phased_quantization_strategy.py # Strategy implementation
+├── quantized_models/                   # Generated Outputs
+├── evaluation_results/
+├── test_benchmark_output/
+├── test_eval_output/
+└── test_output/
 ```
 
 ---
 
 ## File Functionality
 
-### 🎯 Core Quantization Files
+### 🎯 [Core Quantization Files](src/)
 
 #### `phase_1_quantization.py` (13KB, 333 lines)
 **Conservative W8A8 uniform quantization implementation**
@@ -92,7 +91,7 @@ esfomo3/
 - Quantization suitability assessment
 - Export capabilities for detailed analysis
 
-### 📊 Evaluation Framework
+### 📊 [Evaluation Framework](evaluation/)
 
 #### `evaluation_framework.py` (16KB, 451 lines)
 **Complete benchmarking and evaluation suite**
@@ -108,7 +107,7 @@ esfomo3/
 - Quantized model benchmarking  
 - Analysis pipeline coordination
 
-### 🧪 Testing Suite
+### 🧪 [Testing Suite](tests/)
 
 #### `test_phase1_basic_functionality.py` (3.5KB, 125 lines)
 **Phase 1 implementation validation**
@@ -173,13 +172,13 @@ pip install transformers auto-gptq lm-eval accelerate pandas psutil
 
 ```bash
 # Test basic functionality
-python test_phase1_basic_functionality.py
+python tests/test_phase1_basic_functionality.py
 
 # Test evaluation framework
-python test_evaluation_framework_basic.py
+python tests/test_evaluation_framework_basic.py
 
 # Test with real benchmark (takes ~3 minutes)
-python test_evaluation_real_benchmark.py
+python tests/test_evaluation_real_benchmark.py
 ```
 
 ---
@@ -189,7 +188,7 @@ python test_evaluation_real_benchmark.py
 ### Phase 1 W8A8 Quantization
 
 ```python
-from phase_1_quantization import Phase1Quantizer
+from src.phase_1_quantization import Phase1Quantizer
 
 # Initialize quantizer
 quantizer = Phase1Quantizer(
@@ -206,7 +205,7 @@ print(f"Memory reduction: {results['memory_reduction_percent']:.1f}%")
 ### Model Evaluation
 
 ```python
-from evaluation_framework import EvaluationConfig, ModelEvaluator
+from evaluation.evaluation_framework import EvaluationConfig, ModelEvaluator
 
 # Configure evaluation
 config = EvaluationConfig(
@@ -226,7 +225,7 @@ evaluator.save_results(results)
 ### Model Architecture Analysis
 
 ```python
-from analyze_nemotron_model import NemotronModelAnalyzer
+from src.analyze_nemotron_model import NemotronModelAnalyzer
 
 # Analyze model structure
 analyzer = NemotronModelAnalyzer("nvidia/Nemotron-H-8B-Base-8K")
