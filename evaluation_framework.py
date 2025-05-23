@@ -38,7 +38,6 @@ class EvaluationConfig:
     model_type: str  # "original", "phase1", "phase2", "phase3"
     batch_size: int = 1
     device: str = "cuda"
-    max_length: int = 2048
     tasks: List[str] = None
     
     def __post_init__(self):
@@ -200,7 +199,6 @@ class ModelEvaluator:
                 tasks=config.tasks,
                 device=config.device,
                 batch_size=config.batch_size,
-                max_length=config.max_length,
                 limit=None,  # Evaluate on full dataset
                 cache_requests=True
             )

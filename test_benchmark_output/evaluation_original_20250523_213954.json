@@ -1,0 +1,26 @@
+{
+  "model_type": "original",
+  "model_path": "microsoft/DialoGPT-small",
+  "task_results": {
+    "arc_easy": {
+      "alias": "arc_easy",
+      "acc,none": 0.398989898989899,
+      "acc_stderr,none": 0.010048240683798745,
+      "acc_norm,none": 0.3640572390572391,
+      "acc_norm_stderr,none": 0.009873293392779134
+    }
+  },
+  "memory_usage_mb": 249.7373046875,
+  "inference_time_per_token_ms": 92.01641753315926,
+  "total_evaluation_time_seconds": 195.01686930656433,
+  "hardware_info": {
+    "cpu_count": 96,
+    "memory_total_gb": 503.5142021179199,
+    "gpu_available": true,
+    "gpu_count": 1,
+    "gpu_name": "NVIDIA A40",
+    "gpu_memory_total_gb": 44.4482421875
+  },
+  "errors": [],
+  "timestamp": "2025-05-23 21:39:54"
+}

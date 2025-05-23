@@ -1,0 +1,20 @@
+{
+  "model_type": "original",
+  "model_path": "microsoft/DialoGPT-small",
+  "task_results": {},
+  "memory_usage_mb": 0,
+  "inference_time_per_token_ms": 0,
+  "total_evaluation_time_seconds": 15.088311195373535,
+  "hardware_info": {
+    "cpu_count": 96,
+    "memory_total_gb": 503.5142021179199,
+    "gpu_available": true,
+    "gpu_count": 1,
+    "gpu_name": "NVIDIA A40",
+    "gpu_memory_total_gb": 44.4482421875
+  },
+  "errors": [
+    "Evaluation failed: simple_evaluate() got an unexpected keyword argument 'max_length'"
+  ],
+  "timestamp": "2025-05-23 21:35:37"
+}
